@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutternews/helper/data.dart';
 import 'package:flutternews/helper/news.dart';
 import 'package:flutternews/models/ArticleModel.dart';
@@ -175,10 +176,13 @@ class BlogTile extends StatelessWidget {
       child: Container(
         margin: EdgeInsets.only(bottom: 16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             ClipRRect(
                 borderRadius: BorderRadius.circular(6),
-                child: Image.network(imageUrl)),
+                child: Container(
+                    width: MediaQuery.of(context).size.width * 0.65,
+                    child: Image.network(imageUrl))),
             SizedBox(
               height: 8,
             ),

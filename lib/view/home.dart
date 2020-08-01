@@ -181,7 +181,7 @@ class BlogTile extends StatelessWidget {
             ClipRRect(
                 borderRadius: BorderRadius.circular(6),
                 child: Container(
-                    width: MediaQuery.of(context).size.width * 0.65,
+                    width: MediaQuery.of(context).size.width,
                     child: Image.network(imageUrl))),
             SizedBox(
               height: 8,
